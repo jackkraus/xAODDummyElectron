@@ -1,2 +1,3 @@
-+ Event/xAOD/xAODDummyElectron
++ Database/AthenaPOOL/AthenaPoolExample/AthenaPoolExampleAlgorithms
++ Database/AthenaPOOL/AthenaPoolExample/AthenaPoolExampleAlgorithms/xAODDummyElectron
 - .*
