@@ -1,0 +1,282 @@
+Testing Jacks AthenaPoolExample_Write
+Py:AutoConfigFlags    INFO Running an input-less job. Will have empty metadata.
+Py:AutoConfigFlags    INFO Running an input-less job. Will have empty metadata.
+Py:AutoConfigFlags    INFO Running an input-less job. Will have empty metadata.
+Py:AutoConfigFlags    INFO Running an input-less job. Will have empty metadata.
+Py:IOVDbAutoCfgFlags WARNING Failed to extract year from project tag . Assuming CONDBR2.
+Py:AutoConfigFlags    INFO Running an input-less job. Will have empty metadata.
+Py:AutoConfigFlags    INFO Running an input-less job. Will have empty metadata.
+WriteTest Complete
+ApplicationMgr    SUCCESS 
+====================================================================================================================================
+                                                   Welcome to ApplicationMgr (GaudiCoreSvc v38r2)
+                                          running on aiatlasbm004.cern.ch on Tue Jul 23 18:11:18 2024
+====================================================================================================================================
+ApplicationMgr       INFO Application Manager Configured successfully
+CoreDumpSvc                                          INFO Handling signals: 11(Segmentation fault) 7(Bus error) 4(Illegal instruction) 14(Alarm clock) 
+AthenaEventLoopMgr                                   INFO Initializing AthenaEventLoopMgr
+CondInputLoader                                      INFO Initializing CondInputLoader...
+ClassIDSvc                                           INFO getRegistryEntries: read 3696 CLIDRegistry entries for module ALL
+MetaDataSvc                                          INFO Initializing MetaDataSvc
+PoolSvc                                             DEBUG Service base class initialized successfully
+PoolSvc                                              INFO Set connectionsvc retry/timeout/IDLE timeout to  'ConnectionRetrialPeriod':300/ 'ConnectionRetrialTimeOut':3600/ 'ConnectionTimeOut':5 seconds with connection cleanup disabled
+PoolSvc                                              INFO Frontier compression level set to 5
+DBReplicaSvc                                         INFO Frontier server at (serverurl=http://atlasfrontier-local.cern.ch:8000/atlr)(serverurl=http://atlasfrontier-ai.cern.ch:8000/atlr)(proxyurl=http://ca-proxy-atlas.cern.ch:3128)(proxyurl=http://ca-proxy-meyrin.cern.ch:3128)(proxyurl=http://ca-proxy.cern.ch:3128)(proxyurl=http://atlasbpfrontier.cern.ch:3127) will be considered for COOL data
+DBReplicaSvc                                         INFO Read replica configuration from /cvmfs/atlas.cern.ch/repo/sw/software/25.0/Athena/25.0.8/InstallArea/x86_64-el9-gcc13-opt/share/dbreplica.config
+DBReplicaSvc                                         INFO Total of 10 servers found for host aiatlasbm004.cern.ch [ATLF ATLAS_COOLPROD atlas_dd ATLAS_CONFIG INT8R INTR ATONR_COOL ATONR_CONF DEVDB11 ATLF ]
+DBReplicaSvc                                         INFO COOL SQLite replicas will be excluded if matching pattern /DBRelease/
+PoolSvc                                              INFO Successfully setup replica sorting algorithm
+PoolSvc                                             DEBUG OutputLevel is 2
+PoolSvc                                              INFO Setting up APR FileCatalog and Streams
+PoolSvc                                             DEBUG POOL ReadCatalog is apcfile:poolcond/PoolFileCatalog.xml
+PoolSvc                                              INFO Resolved path (via ATLAS_POOLCOND_PATH) is /cvmfs/atlas-condb.cern.ch/repo/conditions/poolcond/PoolFileCatalog.xml
+PoolSvc                                             DEBUG POOL ReadCatalog is apcfile:poolcond/PoolCat_oflcond.xml
+PoolSvc                                              INFO Unable find catalog apcfile:poolcond/PoolCat_oflcond.xml in $ATLAS_POOLCOND_PATH and $DATAPATH
+PoolSvc                                             DEBUG POOL ReadCatalog is apcfile:poolcond/PoolCat_comcond.xml
+PoolSvc                                              INFO Unable find catalog apcfile:poolcond/PoolCat_comcond.xml in $ATLAS_POOLCOND_PATH and $DATAPATH
+PoolSvc                                              INFO POOL WriteCatalog is file:Catalog1.xml
+DbSession                                            INFO     Open     DbSession    
+Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All] 
+AthenaPoolCnvSvc                                    DEBUG Setting StorageType to ROOTTREEINDEX
+MetaDataSvc                                          INFO Found MetaDataTools = PublicToolHandleArray(['BookkeeperTool/BookkeeperTool','IOVDbMetaDataTool/IOVDbMetaDataTool','xAODMaker::FileMetaDataTool/xAODMaker::FileMetaDataTool'])
+MetaDataSvc                                          INFO   AlgTool: ToolSvc.BookkeeperTool
+MetaDataSvc                                          INFO   AlgTool: ToolSvc.IOVDbMetaDataTool
+MetaDataSvc                                          INFO   AlgTool: ToolSvc.xAODMaker::FileMetaDataTool
+IOVDbSvc                                             INFO Only 5 POOL conditions files will be open at once
+IOVDbSvc                                             INFO Cache alignment will be done in 3 slices
+IOVDbSvc                                             INFO Global tag: CONDBR2-BLKPA-RUN2-09 set from joboptions
+IOVDbFolder                                          INFO Read from meta data only for folder /TagInfo
+IOVDbSvc                                             INFO Initialised with 1 connections and 1 folders
+IOVDbSvc                                             INFO Service IOVDbSvc initialised successfully
+IOVDbSvc                                             INFO   AlgTool: ToolSvc.IOVDbMetaDataTool
+AthDictLoaderSvc                                     INFO in initialize...
+AthDictLoaderSvc                                     INFO acquired Dso-registry
+ClassIDSvc                                           INFO getRegistryEntries: read 2546 CLIDRegistry entries for module ALL
+IOVDbSvc                                             INFO preLoadAddresses: Removing folder /TagInfo. It should only be in the file meta data and was not found.
+TagInfoMgr                                           INFO   AlgTool: ToolSvc.IOVDbMetaDataTool
+CondInputLoader                                      INFO Adding base classes:
+CondInputLoader                                      INFO Will create WriteCondHandle dependencies for the following DataObjects:
+ClassIDSvc                                           INFO getRegistryEntries: read 113 CLIDRegistry entries for module ALL
+ClassIDSvc                                           INFO getRegistryEntries: read 722 CLIDRegistry entries for module ALL
+WriteData2                                           INFO WriteData2 in initialize()
+WriteData2                                          DEBUG input handles: 0
+WriteData2                                          DEBUG output handles: 4
+WriteData2                                          DEBUG data dependencies:
+  + OUTPUT  ( 'ExampleHitContainer' , 'StoreGateSvc+MyHits' ) 
+  + OUTPUT  ( 'ExampleHitContainer' , 'StoreGateSvc+PetersHits' ) 
+  + OUTPUT  ( 'SG::AuxElement' , 'StoreGateSvc+JacksEvent' ) 
+  + OUTPUT  ( 'xAOD::DummyElectron' , 'StoreGateSvc+JacksDummyElectron' ) 
+  + OUTPUT  ( 'xAOD::EventInfo' , 'StoreGateSvc+JacksEvent' ) 
+WriteTag                                            DEBUG Property update for OutputLevel : new value = 2
+WriteTag                                             INFO in initialize()
+WriteTag                                            DEBUG Defining the attribute list specification.
+WriteTag                                            DEBUG Printing out attribute list specification:
+WriteTag                                            DEBUG  name RunNumber type unsigned int
+WriteTag                                            DEBUG  name EventNumber type unsigned int
+WriteTag                                            DEBUG  name MagicNumber type unsigned int
+WriteTag                                            DEBUG input handles: 0
+WriteTag                                            DEBUG output handles: 2
+WriteTag                                            DEBUG data dependencies:
+  + OUTPUT  ( 'AthenaAttributeList' , 'StoreGateSvc+RunEventTag' ) 
+  + OUTPUT  ( 'TagAthenaAttributeList' , 'StoreGateSvc+RunEventTag' ) 
+MagicWriteTag                                       DEBUG Property update for OutputLevel : new value = 2
+MagicWriteTag                                        INFO in initialize()
+MagicWriteTag                                       DEBUG Defining the attribute list specification.
+MagicWriteTag                                       DEBUG Printing out attribute list specification:
+MagicWriteTag                                       DEBUG  name RunNumber type unsigned int
+MagicWriteTag                                       DEBUG  name EventNumber type unsigned int
+MagicWriteTag                                       DEBUG  name MagicNumber type unsigned int
+MagicWriteTag                                       DEBUG input handles: 0
+MagicWriteTag                                       DEBUG output handles: 2
+MagicWriteTag                                       DEBUG data dependencies:
+  + OUTPUT  ( 'AthenaAttributeList' , 'StoreGateSvc+MagicTag' ) 
+  + OUTPUT  ( 'TagAthenaAttributeList' , 'StoreGateSvc+MagicTag' ) 
+PassNoneFilter                                      DEBUG Property update for OutputLevel : new value = 2
+PassNoneFilter                                      DEBUG input handles: 0
+PassNoneFilter                                      DEBUG output handles: 0
+StreamStream1.StreamStream1_TopFolder               DEBUG Property update for OutputLevel : new value = 2
+StreamStream1.StreamStream1_TopFolder             WARNING add: can not find type [xAOD::DummyElectronContainer] in clid db
+StreamStream1                                       DEBUG In initialize 
+StreamStream1                                       DEBUG Found IDecisionSvc.
+DecisionSvc                                          INFO Inserting stream: StreamStream1 with no Algs
+StreamStream1                                       DEBUG End initialize 
+StreamStream1                                       DEBUG In initialize
+StreamStream1                                       DEBUG Found StoreGateSvc store.
+StreamStream1                                       DEBUG Found StoreGateSvc/MetaDataStore store.
+StreamStream1.StreamStream1Tool                     DEBUG Property update for OutputLevel : new value = 2
+StreamStream1.StreamStream1Tool                      INFO Initializing StreamStream1.StreamStream1Tool
+StreamStre...StreamStream1_FileMetaDataCreatorTool  DEBUG Property update for OutputLevel : new value = 2
+StreamStream1.StreamStream1_MakeEventStreamInfo     DEBUG Property update for OutputLevel : new value = 2
+StreamStream1.StreamStream1_MakeEventStreamInfo     DEBUG Initializing StreamStream1.StreamStream1_MakeEventStreamInfo
+StreamStream1.ThinningCacheTool_StreamStream1       DEBUG Property update for OutputLevel : new value = 2
+StreamStream1                                        INFO Found HelperTools = PrivateToolHandleArray(['xAODMaker::FileMetaDataCreatorTool/StreamStream1_FileMetaDataCreatorTool','MakeEventStreamInfo/StreamStream1_MakeEventStreamInfo','Athena::ThinningCacheTool/ThinningCacheTool_StreamStream1'])
+StreamStream1                                        INFO Data output: ROOTTREE:SimplePoolFile1.root
+StreamStream1                                        INFO I/O reinitialization...
+StreamStream1.StreamStream1_transient               DEBUG Property update for OutputLevel : new value = 2
+ClassIDSvc                                           INFO getRegistryEntries: read 348 CLIDRegistry entries for module ALL
+ClassIDSvc                                           INFO getRegistryEntries: read 7 CLIDRegistry entries for module ALL
+ClassIDSvc                                           INFO getRegistryEntries: read 40 CLIDRegistry entries for module ALL
+ClassIDSvc                                           INFO getRegistryEntries: read 22 CLIDRegistry entries for module ALL
+ClassIDSvc                                           INFO getRegistryEntries: read 6 CLIDRegistry entries for module ALL
+ClassIDSvc                                           INFO getRegistryEntries: read 24 CLIDRegistry entries for module ALL
+ClassIDSvc                                           INFO getRegistryEntries: read 4394 CLIDRegistry entries for module ALL
+ClassIDSvc                                           INFO getRegistryEntries: read 10 CLIDRegistry entries for module ALL
+ClassIDSvc                                           INFO getRegistryEntries: read 6 CLIDRegistry entries for module ALL
+StreamStream1                                       DEBUG End initialize
+StreamStream1                                       DEBUG input handles: 0
+StreamStream1                                       DEBUG output handles: 2
+StreamStream1                                       DEBUG Registering all Tools in ToolHandleArray HelperTools
+StreamStream1                                       DEBUG Adding private ToolHandle tool StreamStream1.StreamStream1_FileMetaDataCreatorTool (xAODMaker::FileMetaDataCreatorTool)
+StreamStream1                                       DEBUG Adding private ToolHandle tool StreamStream1.StreamStream1_MakeEventStreamInfo (MakeEventStreamInfo)
+StreamStream1                                       DEBUG Adding private ToolHandle tool StreamStream1.ThinningCacheTool_StreamStream1 (Athena::ThinningCacheTool)
+StreamStream1                                       DEBUG Adding private ToolHandle tool StreamStream1.StreamStream1Tool (AthenaOutputStreamTool)
+StreamStream1                                       DEBUG data dependencies:
+  + INPUT   ( 'AthenaAttributeList' , 'StoreGateSvc+MagicTag' )  [StreamStream1.StreamStream1Tool]
+  + OUTPUT  ( 'DataHeader' , 'StoreGateSvc+StreamStream1' ) 
+  + OUTPUT  ( 'SG::CompressionInfo' , 'StoreGateSvc+CompressionInfo_StreamStream1' ) 
+  + OUTPUT  ( 'SG::SelectionVetoes' , 'StoreGateSvc+SelectionVetoes_StreamStream1' ) 
+ClassIDSvc                                           INFO getRegistryEntries: read 30 CLIDRegistry entries for module ALL
+DecisionSvc                                          INFO Inserting stream: StreamStream2 with no Algs
+StreamStream2.StreamStream2Tool                      INFO Initializing StreamStream2.StreamStream2Tool
+StreamStream2                                        INFO Found HelperTools = PrivateToolHandleArray(['xAODMaker::FileMetaDataCreatorTool/StreamStream2_FileMetaDataCreatorTool','MakeEventStreamInfo/StreamStream2_MakeEventStreamInfo','Athena::ThinningCacheTool/ThinningCacheTool_StreamStream2'])
+StreamStream2                                        INFO Data output: ROOTTREE:SimplePoolFile2.root
+StreamStream2                                        INFO I/O reinitialization...
+DecisionSvc                                          INFO Inserting stream: StreamStream3 with no Algs
+StreamStream3.StreamStream3Tool                      INFO Initializing StreamStream3.StreamStream3Tool
+StreamStream3                                        INFO Found HelperTools = PrivateToolHandleArray(['xAODMaker::FileMetaDataCreatorTool/StreamStream3_FileMetaDataCreatorTool','MakeEventStreamInfo/StreamStream3_MakeEventStreamInfo','Athena::ThinningCacheTool/ThinningCacheTool_StreamStream3'])
+StreamStream3                                        INFO Data output: ROOTTREE:EmptyPoolFile.root
+StreamStream3                                        INFO I/O reinitialization...
+EventSelector                                        INFO  Enter McEventSelector Initialization 
+AthenaEventLoopMgr                                   INFO Setup EventSelector service EventSelector
+ApplicationMgr                                       INFO Application Manager Initialized successfully
+ClassIDSvc                                           INFO getRegistryEntries: read 110 CLIDRegistry entries for module ALL
+ApplicationMgr                                       INFO Application Manager Started successfully
+EventPersistencySvc                                  INFO Added successfully Conversion service:AthenaPoolCnvSvc
+EventPersistencySvc                                  INFO Added successfully Conversion service:McCnvSvc
+AthenaEventLoopMgr                                   INFO   ===>>>  start of run 1    <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #4294967297, run #1 0 events processed so far  <<<===
+WriteData2                                          DEBUG WriteDate2 in execute()
+WriteData2                                           INFO WriteData2_Test: outputEI runNumber: 1, eventNumber: 1, lumiBlock: 115
+WriteData2                                           INFO WriteData2_Test: outputDummyE Pt: 116
+WriteData2                                           INFO WriteData2 registered all data
+WriteTag                                            DEBUG in execute()
+WriteTag                                             INFO EventInfo event: 1  run: 1
+WriteTag                                             INFO registered all data
+MagicWriteTag                                       DEBUG in execute()
+MagicWriteTag                                        INFO EventInfo event: 1  run: 1
+MagicWriteTag                                        INFO registered all data
+StreamStream1                                       DEBUG addItemObjects(2101,"*") called
+StreamStream1                                       DEBUG            Key:*
+StreamStream1.StreamStream1_excluded                DEBUG Property update for OutputLevel : new value = 2
+StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
+StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
+StreamStream1                                       DEBUG  Added object 2101,"McEventInfo"
+StreamStream1                                       DEBUG addItemObjects(9102,"MyHits") called
+StreamStream1                                       DEBUG            Key:MyHits
+StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
+StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
+StreamStream1                                       DEBUG  Failed to receive proxy iterators from StoreGate for 9102,"MyHits". Skipping
+StreamStream1                                       DEBUG addItemObjects(9102,"PetersHits") called
+StreamStream1                                       DEBUG            Key:PetersHits
+StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
+StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
+StreamStream1                                       DEBUG  Failed to receive proxy iterators from StoreGate for 9102,"PetersHits". Skipping
+StreamStream1                                       DEBUG addItemObjects(12109089,"JacksDummyElectron") called
+StreamStream1                                       DEBUG            Key:JacksDummyElectron
+StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
+StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
+StreamStream1                                       DEBUG  Added object 12109089,"JacksDummyElectron"
+StreamStream1                                       DEBUG addItemObjects(38853911,"EventInfoAux.") called
+StreamStream1                                       DEBUG            Key:EventInfoAux.
+StreamStream1.StreamStream1_compressed_high         DEBUG Property update for OutputLevel : new value = 2
+StreamStream1.StreamStream1_compressed_low          DEBUG Property update for OutputLevel : new value = 2
+StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
+StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
+StreamStream1                                       DEBUG  No object matching 38853911,"EventInfoAux." found
+StreamStream1                                       DEBUG addItemObjects(38853911,"JacksEventAux.") called
+StreamStream1                                       DEBUG            Key:JacksEventAux.
+StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
+StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
+StreamStream1                                       DEBUG  Added object 38853911,"JacksEventAux."
+StreamStream1                                       DEBUG addItemObjects(45903698,"EventInfo") called
+StreamStream1                                       DEBUG            Key:EventInfo
+StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
+StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
+StreamStream1                                       DEBUG  No object matching 45903698,"EventInfo" found
+StreamStream1                                       DEBUG addItemObjects(45903698,"JacksEvent") called
+StreamStream1                                       DEBUG            Key:JacksEvent
+StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
+StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
+StreamStream1                                       DEBUG  Added object 45903698,"JacksEvent"
+StreamStream1                                       DEBUG addItemObjects(167728019,"*") called
+StreamStream1                                       DEBUG            Key:*
+StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
+StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
+StreamStream1                                       DEBUG  Failed to receive proxy iterators from StoreGate for 167728019,"*". Skipping
+StreamStream1                                       DEBUG addItemObjects(1087532415,"JacksElectron") called
+StreamStream1                                       DEBUG            Key:JacksElectron
+StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
+StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
+StreamStream1                                       DEBUG  Failed to receive proxy iterators from StoreGate for 1087532415,"JacksElectron". Skipping
+StreamStream1                                       DEBUG addItemObjects(1115737378,"JacksElectronAux.") called
+StreamStream1                                       DEBUG            Key:JacksElectronAux.
+StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
+StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
+StreamStream1                                       DEBUG  Failed to receive proxy iterators from StoreGate for 1115737378,"JacksElectronAux.". Skipping
+StreamStream1                                       DEBUG addItemObjects(1310536731,"JacksDummyElectronContainer") called
+StreamStream1                                       DEBUG            Key:JacksDummyElectronContainer
+StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
+StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
+StreamStream1                                       DEBUG  Failed to receive proxy iterators from StoreGate for 1310536731,"JacksDummyElectronContainer". Skipping
+StreamStream1                                       DEBUG  Collected objects:
+StreamStream1                                       DEBUG  Object/count: EventInfo_McEventInfo, 1
+StreamStream1                                       DEBUG  Object/count: xAOD::DummyElectron_JacksDummyElectron, 1
+StreamStream1                                       DEBUG  Object/count: xAOD::EventAuxInfo_JacksEventAux., 1
+StreamStream1                                       DEBUG  Object/count: xAOD::EventInfo_JacksEvent, 1
+DbSession                                            INFO     Open     DbSession    
+Domain[ROOT_All]                                     INFO >   Access   DbDomain     UPDATE    [ROOT_All] 
+AthenaPoolCnvSvc                                    DEBUG setAttribute TREE_MAX_SIZE to 1099511627776L
+AthenaPoolCnvSvc                                    DEBUG setAttribute DEFAULT_SPLITLEVEL to 0
+AthenaPoolCnvSvc                                    DEBUG setAttribute STREAM_MEMBER_WISE to 1
+AthenaPoolCnvSvc                                    DEBUG setAttribute DEFAULT_BUFFERSIZE to 32000
+AthenaPoolCnvSvc                                    DEBUG setAttribute TREE_BRANCH_OFFSETTAB_LEN to 100
+PersistencySvc::UserDB::fid()                       DEBUG lookupPFN: SimplePoolFile1.root returned FID: '' tech=
+PersistencySvc::UserDB::connectForWrite()           DEBUG registered PFN: SimplePoolFile1.root with FID:2B6F808C-D323-744D-B2BE-141CD565033C
+Domain[ROOT_All]                                     INFO ->  Access   DbDatabase   CREATE    [ROOT_All] 2B6F808C-D323-744D-B2BE-141CD565033C
+Domain[ROOT_All]                                     INFO                           SimplePoolFile1.root
+RootDatabase.open                                    INFO SimplePoolFile1.root File version:62812
+SimplePoolFile1.root                                DEBUG --> Access   DbContainer  CREATE    [ROOT_All] ##Shapes
+##Shapes                                            DEBUG Opening
+##Shapes                                            DEBUG    attributes# = 1
+##Shapes                                            DEBUG Opened container ##Shapes of type ROOT_Tree
+##Shapes                                            DEBUG No objects passing selection criteria... Container has 0 Entries in total.
+SimplePoolFile1.root                                DEBUG --> Access   DbContainer  CREATE    [ROOT_All] ##Links
+##Links                                             DEBUG Opening
+##Links                                             DEBUG    attributes# = 1
+##Links                                             DEBUG Opened container ##Links of type ROOT_Tree
+##Links                                             DEBUG No objects passing selection criteria... Container has 0 Entries in total.
+SimplePoolFile1.root                                DEBUG --> Access   DbContainer  CREATE    [ROOT_All] ##Params
+##Params                                            DEBUG Opening
+##Params                                            DEBUG    attributes# = 1
+##Params                                            DEBUG Opened container ##Params of type ROOT_Tree
+SimplePoolFile1.root                                DEBUG --->Adding Assoc :2B6F808C-D323-744D-B2BE-141CD565033C/##Params [200]  (2 , ffffffffffffffff)
+SimplePoolFile1.root                                DEBUG ---->ClassID:DA8F479C-09BC-49D4-94BC-99D025A23A3B
+##Params                                            DEBUG No objects passing selection criteria... Container has 0 Entries in total.
+AthenaPoolCnvSvc                                    DEBUG setAttribute CONTAINER_SPLITLEVEL to 0 for db: SimplePoolFile1.root and cont: TTree=POOLContainerForm(DataHeaderForm)
+StreamStream1                                       DEBUG connectOutput done for ROOTTREE:SimplePoolFile1.root
+AthenaPoolCnvSvc                                     INFO problem adding converter for CLID [12109089]
+AthenaPoolCnvSvc                                     INFO problem adding converter for CLID [12109089]
+AthenaPoolCnvSvc                                     INFO No converter for object SG::DataBucket<xAOD::DummyElectron>  CLID= 12109089
+StreamStream1.StreamStream1Tool                     ERROR Could not create Rep for DataObject (clid/key):12109089 JacksDummyElectron
+StreamStream1                                       FATAL streamObjects failed.
+SimplePoolFile1.root                                DEBUG DB Action Commit
+ClassIDSvc                                           INFO getRegistryEntries: read 26 CLIDRegistry entries for module ALL
+StreamStream1                                       ERROR Maximum number of errors ( 'ErrorMax':1) reached.
+AthOutSeq                                            INFO execute of [StreamStream1] did NOT succeed
+AthOutSeq                                           ERROR Maximum number of errors ( 'ErrorMax':1) reached.
+AthMasterSeq                                         INFO execute of [AthOutSeq] did NOT succeed
+AthMasterSeq                                        ERROR Maximum number of errors ( 'ErrorMax':1) reached.
+AthenaEventLoopMgr                                   INFO Execution of algorithm AthMasterSeq failed with StatusCode::FAILURE
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #4294967297, run #1 1 events processed so far  <<<===
+AthenaEventLoopMgr                                  ERROR Terminating event processing loop due to errors
+Py:ComponentAccumulator   ERROR Failure running application

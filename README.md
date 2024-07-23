@@ -32,7 +32,10 @@ source x86_64-el9-gcc13-opt/setup.sh;
 ```
 
 
-**Next: Modifying tests using xAOD::DummyElectron objects**
+**Next: Testing xAOD::DummyElectron objects**
+After sourcing, go to a directory where you can run the test and run: 
+```
+python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_Write > writelog.txt
+```
 
-One of the tests I've begun to tinker with is this one from Serhan: https://gitlab.cern.ch/amete/rntuple-enum-debug
-where in the base folder (before `/build`) I clone this repo and start to run the `./RunTest.sh` script, where it gives a few errors. It's at this point I'm unsure how to proceed and will continue to look into it. 
+This should reproduce the same error log `july23-writelog.txt`
