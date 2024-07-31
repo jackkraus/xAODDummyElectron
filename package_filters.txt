@@ -1,3 +1,2 @@
-+ Database/AthenaPOOL/AthenaPoolExample/AthenaPoolExampleAlgorithms
-+ Database/AthenaPOOL/AthenaPoolExample/xAODDummyElectron
++ Database/AthenaPOOL/AthenaPoolExample/.*
 - .*
