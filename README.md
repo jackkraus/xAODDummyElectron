@@ -42,23 +42,17 @@ after the `writelog` is produced, we can now try reading:
 python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_Read > readlog.txt
 ```
 
-### Per: July 30, 2024 issue: 
-The `readlog.txt` should show the following at the foot of the file:
+### Per: August 1, 2024 issue: 
+When producing the `writelog.txt`, we should be able to search `/DummyElectronAux` which shows the following:
 ```
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #4294967297, run #1 10 events processed so far  <<<===
-ReadData2                                            INFO ReadData2 is executing ...
-ReadData2                                           ERROR  Could not get dummy electron
-ReadData2                                           ERROR Maximum number of errors ( 'ErrorMax':1) reached.
-AthAlgSeq                                            INFO execute of [ReadData2] did NOT succeed
-AthAlgSeq                                           ERROR Maximum number of errors ( 'ErrorMax':1) reached.
-AthAllAlgSeq                                         INFO execute of [AthAlgSeq] did NOT succeed
-AthAllAlgSeq                                        ERROR Maximum number of errors ( 'ErrorMax':1) reached.
-AthAlgEvtSeq                                         INFO execute of [AthAllAlgSeq] did NOT succeed
-AthAlgEvtSeq                                        ERROR Maximum number of errors ( 'ErrorMax':1) reached.
-AthMasterSeq                                         INFO execute of [AthAlgEvtSeq] did NOT succeed
-AthMasterSeq                                        ERROR Maximum number of errors ( 'ErrorMax':1) reached.
-AthenaEventLoopMgr                                   INFO Execution of algorithm AthMasterSeq failed with StatusCode::FAILURE
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #4294967297, run #1 11 events processed so far  <<<===
-AthenaEventLoopMgr                                  ERROR Terminating event processing loop due to errors
-Py:ComponentAccumulator   ERROR Failure running application
+StreamStream1.StreamStream1_TopFolder             WARNING add: can not find type [xAOD::DummyElectronAux] in clid db
+.
+.
+.
+StreamStream1                                       DEBUG  Failed to receive proxy iterators from StoreGate for 167728019,"*". Skipping
+StreamStream1                                       DEBUG addItemObjects(182033022,"JacksDummyElectronAux") called
+StreamStream1                                       DEBUG            Key:JacksDummyElectronAux
+StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
+StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
+StreamStream1                                       DEBUG  Failed to receive proxy iterators from StoreGate for 182033022,"JacksDummyElectronAux". Skipping
 ```
