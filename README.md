@@ -42,17 +42,9 @@ after the `writelog` is produced, we can now try reading:
 python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_Read > readlog.txt
 ```
 
-### Per: August 1, 2024 issue: 
-When producing the `writelog.txt`, we should be able to search `/DummyElectronAux` which shows the following:
+### Per: August 5, 2024 issue: 
+When producing the `readlog.txt`, we should be able to search `/ERROR` which shows the following:
 ```
-StreamStream1.StreamStream1_TopFolder             WARNING add: can not find type [xAOD::DummyElectronAux] in clid db
-.
-.
-.
-StreamStream1                                       DEBUG  Failed to receive proxy iterators from StoreGate for 167728019,"*". Skipping
-StreamStream1                                       DEBUG addItemObjects(182033022,"JacksDummyElectronAux") called
-StreamStream1                                       DEBUG            Key:JacksDummyElectronAux
-StreamStream1                                       DEBUG      Comp Attr 0 with 7 mantissa bits.
-StreamStream1                                       DEBUG      Comp Attr 0 with 15 mantissa bits.
-StreamStream1                                       DEBUG  Failed to receive proxy iterators from StoreGate for 182033022,"JacksDummyElectronAux". Skipping
+ReadData2                                           FATAL Dummy Electron #0 pt =  Standard std::exception is caught
+ReadData2                                           ERROR SG::ExcNoAuxStore: Requested aux data item `::pt' (21) but there is no associated aux data store.
 ```
