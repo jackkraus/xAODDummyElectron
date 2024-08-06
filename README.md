@@ -41,10 +41,3 @@ after the `writelog` is produced, we can now try reading:
 ```
 python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_Read > readlog.txt
 ```
-
-### Per: August 5, 2024 issue: 
-When producing the `readlog.txt`, we should be able to search `/ERROR` which shows the following:
-```
-ReadData2                                           FATAL Dummy Electron #0 pt =  Standard std::exception is caught
-ReadData2                                           ERROR SG::ExcNoAuxStore: Requested aux data item `::pt' (21) but there is no associated aux data store.
-```
