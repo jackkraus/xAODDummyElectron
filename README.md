@@ -1,4 +1,4 @@
-# xAODDummyElectron
+# xAOD::ExampleElectron Testing
 
 
 To build Athena and run the scripts needed to run
@@ -39,5 +39,6 @@ python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_Write > writelog.txt
 ```
 after the `writelog` is produced, we can now try reading:
 ```
-python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_Read > readlog.txt
+python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadWrite > readwritelog.txt
 ```
+and this is where the segfault shows up `readwritelog-segfault.txt`.
