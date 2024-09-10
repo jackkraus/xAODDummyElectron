@@ -37,7 +37,7 @@ After sourcing, go to a directory where you can run the test and run:
 ```
 python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_Write > writelog.txt
 ```
-after the `writelog` is produced, we can now try reading:
+after the `writelog` is produced, we can now try reading ExampleTracks and writing out xAOD::ExampleElectrons:
 ```
 python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadWrite > readwritelog.txt
 ```
