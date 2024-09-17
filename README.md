@@ -32,13 +32,21 @@ source x86_64-el9-gcc13-opt/setup.sh;
 ```
 
 
-**Next: Testing xAOD::DummyElectron objects**
+**Next: Testing writing ExampleTracks to xAOD::ExampleElectron objects**
 After sourcing, go to a directory where you can run the test and run: 
 ```
 python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_Write > writelog.txt
 ```
 after the `writelog` is produced, we can now try reading ExampleTracks and writing out xAOD::ExampleElectrons:
 ```
-python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadWrite > readwritelog.txt
+python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadWrite > readwrite_test_log..txt
 ```
-and this is where the segfault shows up `readwritelog-segfault.txt`.
+When we run the following script, we find that we're able to access the ExampleTracks from SimplePoolFile3 and write out xAOD::ExampleElectrons
+(My debug statements start with `CHECKTHIS`, if that's useful to you)
+```
+python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadWriteTracks > tracks_rw_test_log.txt
+```
+The bigger discrepancy comes when we run the Read test
+```
+python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_Read > read_test_log.txt
+```
