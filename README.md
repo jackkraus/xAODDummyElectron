@@ -35,17 +35,17 @@ source x86_64-el9-gcc13-opt/setup.sh;
 **Next: Testing writing ExampleTracks to xAOD::ExampleElectron objects**
 After sourcing, go to a directory where you can run the test and run: 
 ```
-python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_Write > writelog.txt
+python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_Write > AthenaPoolExample_Write.ref
 ```
 after the `writelog` is produced, we can now try reading ExampleTracks and writing out xAOD::ExampleElectrons:
 ```
-python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadWrite > readwrite_test_log..txt
+python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadWrite > AthenaPoolExample_ReadWrite.ref
 ```
 When we run the following script, we find that we're able to access the ExampleTracks from SimplePoolFile3 and write out xAOD::ExampleElectrons
 ```
-python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_WritexAODElectrons > write_xAOD_electrons_test_log.txt
+python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_WritexAODElectrons > AthenaPoolExample_WritexAODElectrons.ref
 ```
 Then we read through the written xAOD::ExampleElectrons
 ```
-python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadxAODElectrons > read_xAOD_electrons_log.txt
+python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadxAODElectrons > AthenaPoolExample_ReadxAODElectrons.ref
 ```
