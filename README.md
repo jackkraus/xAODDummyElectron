@@ -6,8 +6,8 @@ To build Athena and run the scripts needed to run
 ```
 git clone https://github.com/jackkraus/xAODDummyElectron.git;
 mv xAODDummyElectron/package_filters.txt .;
-lsetup "asetup 25.0.8,Athena" ; 
-mkdir athena-25.0.8 && cd athena-25.0.8; 
+lsetup "asetup main,latest,Athena" ; 
+mkdir athena-latest && cd athena-latest; 
 mv ../package_filters.txt .; 
 git clone https://gitlab.cern.ch/akraus/athena.git; 
 cd athena; 
@@ -17,7 +17,7 @@ git checkout jacks-test-branch
 cd ..;
 ```
 
-then run the build scripts
+then in a new instance run the build scripts
 ```
 mkdir build && cd build ;
 cmake -DATLAS_PACKAGE_FILTER_FILE=../package_filters.txt ../athena/Projects/WorkDir >& cmakelog;
@@ -42,11 +42,10 @@ after the `writelog` is produced, we can now try reading ExampleTracks and writi
 python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadWrite > readwrite_test_log..txt
 ```
 When we run the following script, we find that we're able to access the ExampleTracks from SimplePoolFile3 and write out xAOD::ExampleElectrons
-(My debug statements start with `CHECKTHIS`, if that's useful to you)
 ```
-python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadWriteTracks > tracks_rw_test_log.txt
+python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_WritexAODElectrons > write_xAOD_electrons_test_log.txt
 ```
-The bigger discrepancy comes when we run the Read test
+Then we read through the written xAOD::ExampleElectrons
 ```
-python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_Read > read_test_log.txt
+python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadxAODElectrons > read_xAOD_electrons_log.txt
 ```
