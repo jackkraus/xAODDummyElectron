@@ -32,20 +32,13 @@ source x86_64-el9-gcc13-opt/setup.sh;
 ```
 
 
-**Next: Testing writing ExampleTracks to xAOD::ExampleElectron objects**
-After sourcing, go to a directory where you can run the test and run: 
+**Next: Running ctests**
+In the same build directory, after sourcing, you should be able to run 
 ```
-python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_Write > AthenaPoolExample_Write.ref
+ctest -j 4 --output-on-failure
 ```
-after the `writelog` is produced, we can now try reading ExampleTracks and writing out xAOD::ExampleElectrons:
+which will produce log files in the path `/build/Database/AthenaPOOL/AthenaPoolExample/AthenaPoolExampleAlgorithms/CMakeFiles/unitTestRun`
+and you can run the following `git diff` to compare the differences in the log from the reference
 ```
-python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadWrite > AthenaPoolExample_ReadWrite.ref
-```
-When we run the following script, we find that we're able to access the ExampleTracks from SimplePoolFile3 and write out xAOD::ExampleElectrons
-```
-python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_WritexAODElectrons > AthenaPoolExample_WritexAODElectrons.ref
-```
-Then we read through the written xAOD::ExampleElectrons
-```
-python -m AthenaPoolExampleAlgorithms.AthenaPoolExample_ReadxAODElectrons > AthenaPoolExample_ReadxAODElectrons.ref
+git diff AthenaPoolExample_WritexAODElectrons.log-todiff AthenaPoolExample_WritexAODElectrons.ref-todiff
 ```
