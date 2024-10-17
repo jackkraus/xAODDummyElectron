@@ -19,6 +19,7 @@ cd ..;
 
 then in a new instance run the build scripts
 ```
+lsetup "asetup main,latest,Athena" ; 
 mkdir build && cd build ;
 cmake -DATLAS_PACKAGE_FILTER_FILE=../package_filters.txt ../athena/Projects/WorkDir >& cmakelog;
 
